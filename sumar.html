@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <input type="text" id="numero1">
+        <input type="text" id="numero2">
+        <input type="button" value="Sumar" onclick="alert(suma(1,2))">
+    </form>
+
+    <script>
+
+        var suma = function (a, b) {
+            var n1 = parseFloat(document.getElementById("numero1").value);
+            var n2 = parseFloat(document.getElementById("numero2").value);
+
+            var resultado = n1 + n2;
+
+            return resultado;
+        }
+
+        alert(suma())
+
+    </script>
+
+</body>
+
+</html>

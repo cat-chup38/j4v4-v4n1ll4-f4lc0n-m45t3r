@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body bgcolor="#373331" text="white">  
+    
+    <ol id="lista1">
+        <li>primero</li>
+        <li>segundo</li>
+    </ol>
+
+    <script>
+        var nuevo_nodo = document.createElement("li");
+        var contenido = document.createTextNode("Cambio");
+
+        nuevo_nodo.appendChild(contenido);
+        
+        var padre = document.getElementsByTagName("li")[0].parentNode;
+        var primer_elemento = document.getElementsByTagName("li")[0];
+        
+        //reemplazar nodo
+        //padre.replaceChild(nuevo_nodo, primer_elemento);
+
+        //eliminar nodo
+        padre.removeChild(primer_elemento);
+        
+
+        
+
+    </script>
+
+
+</body>
+</html>

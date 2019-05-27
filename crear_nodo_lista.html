@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body bgcolor="#373331" text="white">  
+    
+    <ol id ="lista1">
+        <li>primero</li>
+        <li>segundo</li>
+    </ol>
+
+    <script>
+        var nuevo_nodo = document.createElement("li");
+        var contenido = document.createTextNode("nuevo texto");
+
+        var lista = document.getElementById("lista1");
+
+        // agregar el texto al elemento li
+        nuevo_nodo.appendChild(contenido);
+
+        // FORMA 1. agregar el nuevo nodo al final de la lista
+        lista.appendChild(nuevo_nodo);
+
+        // FORMA 2. obtener el nombre del padre sin saberlo y agregarlo al final de la lista    
+        //padre = document.getElementsByTagName("li")[0].parentNode;
+        //padre.appendChild(nuevo_nodo);
+
+        // FORMA 3. 
+        var padre = document.getElementsByName("li")[0].parentNode;
+        var primer_elemento = document.getElementsByTagName("li")[0];
+        padre.insertBefore(nuevo_nodo, primer_elemento)
+
+    </script>
+
+
+</body>
+</html>
