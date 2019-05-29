@@ -12,6 +12,7 @@
         nuevo_nodo.appendChild(contenido);
 
         var insertedNode = padre.insertBefore(nuevo_nodo, referencia);
+
         alert("agregado");
     };
 
